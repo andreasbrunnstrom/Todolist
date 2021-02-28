@@ -1,0 +1,86 @@
+@import "https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap";
+
+body {
+  font-family: "Gochi Hand";
+}
+
+header > h1 {
+  font-size: 32pt;
+  margin: 0.2em;
+  text-align: center;
+}
+
+main {
+  width: 30em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+main > section > button {
+  margin-left: 5px;
+}
+
+main > section > ul {
+  padding-inline-start: 0px;
+}
+main > section > ul > li {
+  list-style: none;
+  font-size: 24pt;
+  animation: blink 1.5s ease-in-out;
+  border-radius: 0.4em;
+  margin: 0.2em;
+  padding: 0.2em 0.6em 0.2em 0.2em;
+  display: flex;
+  flex-direction: row;
+}
+
+main > section > ul > li.klart {
+  background: lightgreen;
+}
+
+main > section > ul > li.klart::before {
+  content: "✔️";
+}
+
+main > section > ul > li::before {
+  content: "❤️";
+  padding-right: 1ex;
+  font-size: 85%;
+}
+
+main > section > ul > li:hover {
+  cursor: pointer;
+}
+
+main > section > ul > li > span {
+  opacity: 0;
+  font-size: 85%;
+  transition: opacity 0.2s ease-in;
+  margin-left: auto;
+}
+
+main > section > ul > li:hover > span {
+  opacity: 1;
+}
+
+footer > section::before {
+  content: "☕️ ";
+}
+footer > section {
+  text-align: center;
+  opacity: 0.5;
+}
+footer > section::after {
+  content: " 🍩";
+}
+
+@keyframes blink {
+  from {
+    background: limegreen;
+  }
+  to {
+    background: #fff;
+  }
+}
